@@ -13,8 +13,8 @@ phases:
       - source ~/.bashrc
       - echo 'Check kubectl version'
       - kubectl version --short --client
-      - chmod +x eks_cicd/prereqs.sh
-      - sh eks_cicd/prereqs.sh
+      - chmod +x prereqs.sh
+      - sh prereqs.sh
 
   pre_build:
     commands:
