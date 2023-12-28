@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Metrics</title>
+</head>
+<body>
+    <h1>GitHub Metrics</h1>
+    <p>Date Range: {{ date_range }}</p>
+    <table border="1">
+        <tr>
+            <th>Username</th>
+            <th>Metric Type</th>
+            <th>Metric Data</th>
+        </tr>
+        {% for metric in github_metrics %}
+            <tr>
+                <td>{{ metric.username }}</td>
+                <td>{{ metric.metric_type }}</td>
+                <td>{{ metric.metric_data }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
