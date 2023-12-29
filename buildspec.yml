@@ -40,6 +40,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $ECR_REPO_URL
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
       - echo Push the latest image to cluster
       - kubectl apply -f eks_cicd/deployment.yaml
