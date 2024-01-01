@@ -31,7 +31,7 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...          
       - docker build -t developeriq:latest .
-      - docker tag $developeriq:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/developeriq:latest
+      - docker tag developeriq:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/developeriq:latest
 
   post_build:
     commands:
