@@ -6,7 +6,7 @@ from flask import Flask, render_template
 # GitHub API Token (generate one in your GitHub account settings)
 GITHUB_TOKEN = $GITHUB_TOKEN
 
-# PostgreSQL Connection Details -New
+# PostgreSQL Connection Details
 DB_HOST = "rds-db1.cjz9pbxtvmuk.us-east-1.rds.amazonaws.com"
 DB_PORT = 5432
 DB_NAME = "postgres"
