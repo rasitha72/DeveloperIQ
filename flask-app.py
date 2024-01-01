@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from flask import Flask, render_template
 
 # GitHub API Token (generate one in your GitHub account settings)
-GITHUB_TOKEN = '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'
+GITHUB_TOKEN = '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'
 
 # PostgreSQL Connection Details
 DB_HOST = "rds-db1.cjz9pbxtvmuk.us-east-1.rds.amazonaws.com"
