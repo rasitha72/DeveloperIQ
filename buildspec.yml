@@ -30,14 +30,14 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t $IMAGE_REPO_NAME:v2 .
-      - docker tag $IMAGE_REPO_NAME:v2 $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:v2
+      - docker build -t developeriq .
+      - docker tag $developeriq $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/developeriq:latest
 
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:v2
+      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/developeriq:latest
       - echo Push the latest image to cluster
       - kubectl apply -f deployment.yaml
       - kubectl rollout restart -f deployment.yaml
