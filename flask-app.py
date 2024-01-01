@@ -13,7 +13,7 @@ DB_NAME = "postgres"
 DB_USER = "rasitha"
 DB_PASSWORD = "rasitha123"
 
-# Contributors (GitHub usernames)
+# Contributors(GitHub usernames)
 contributors = ['rasitha72', 'ekmett', 'Raynos', 'postmodern', 'isaacs']
 
 # Function to make API requests to GitHub GraphQL API
