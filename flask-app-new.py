@@ -33,7 +33,7 @@ def fetch_last_week_github_metrics():
     table_name = "metrics"
 
     # Query to select data for the last week
-    select_query = f"SELECT * FROM {table_name} WHERE created_at >= %s"
+    select_query = f"SELECT * FROM {table_name} WHERE commit_date >= %s"
     
     try:
         # Execute the query
