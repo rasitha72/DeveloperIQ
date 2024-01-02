@@ -4,29 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Metrics</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-    <h1>DeveloperIQ- Metrics of AcmeCorp Developers for Last Week</h1>
-    <table border="1">
+    <h1>GitHub Metrics for {{ date_range }}- IIT DeveloperIQ </h1>
+    <table>
         <thead>
             <tr>
-                <th>Contributor Name</th>
+                <th>Username</th>
                 <th>Commits Count</th>
                 <th>Open Issues Count</th>
-                <th>Closed Issues Count</th>                
+                <th>Closed Issues Count</th>
                 <th>Pull Requests Count</th>
-                <th>Commit Date</th>
+                <th>Created At</th>
             </tr>
         </thead>
         <tbody>
-            {% for row in github_metrics %}
+            {% for metric in github_metrics %}
                 <tr>
-                    <td>{{ row[0] }}</td>
-                    <td>{{ row[1] }}</td>
-                    <td>{{ row[2] }}</td>
-                    <td>{{ row[3] }}</td>
-                    <td>{{ row[4] }}</td>
-                    <td>{{ row[5] }}</td>
+                    <td>{{ metric.username }}</td>
+                    <td>{{ metric.commits_count }}</td>
+                    <td>{{ metric.open_issues_count }}</td>
+                    <td>{{ metric.closed_issue_count }}</td>
+                    <td>{{ metric.pull_requests_count }}</td>
+                    <td>{{ metric.created_at }}</td>
                 </tr>
             {% endfor %}
         </tbody>
