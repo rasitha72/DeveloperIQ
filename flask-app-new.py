@@ -51,7 +51,7 @@ def fetch_last_week_github_metrics():
                 "open_issues_count": row[2],
                 "closed_issue_count": row[3],
                 "pull_requests_count": row[4],
-                "commit_date": row[5]
+                "created_at": row[5]
             })
 
         return metrics
