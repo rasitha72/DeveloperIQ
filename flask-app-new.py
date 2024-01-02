@@ -69,7 +69,7 @@ def fetch_last_week_github_metrics():
 def display_last_week_metrics():
     last_week_metrics = fetch_last_week_github_metrics()
     date_range = f"Last week's data"
-    return render_template('new_metrics.html', metrics=last_week_metrics, date_range=date_range)
+    return render_template('new_metrics.html', github_metrics=last_week_metrics, date_range=date_range)
 
 if __name__ == '__main__':
     app.run(debug=True)
