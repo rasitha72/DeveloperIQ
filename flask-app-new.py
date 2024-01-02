@@ -45,7 +45,7 @@ def fetch_last_week_github_metrics():
         # Display the results
         metrics = []
         for row in rows:
-            github_metrics.append({
+            metrics.append({
                 "username": row[0],
                 "commits_count": row[1],
                 "open_issues_count": row[2],
@@ -53,7 +53,7 @@ def fetch_last_week_github_metrics():
                 "commit_date": row[4]
             })
 
-        return github_metrics
+        return metrics
 
     except Exception as e:
         print(f"Error: {e}")
@@ -69,7 +69,7 @@ def fetch_last_week_github_metrics():
 def display_last_week_metrics():
     last_week_metrics = fetch_last_week_github_metrics()
     date_range = f"Last week's data"
-    return render_template('new_metrics.html', github_metrics=last_week_metrics, date_range=date_range)
+    return render_template('new_metrics.html', metrics=last_week_metrics, date_range=date_range)
 
 if __name__ == '__main__':
     app.run(debug=True)
