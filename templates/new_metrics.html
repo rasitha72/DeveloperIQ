@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Metrics</title>
+</head>
+<body>
+    <h1>DeveloperIQ- Metrics of AcmeCorp Developers</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Contributor Name</th>
+                <th>Commits Count</th>
+                <th>Open Issues Count</th>
+                <th>Closed Issues Count</th>                
+                <th>Pull Requests Count</th>
+                <th>Commit Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                    <td>{{ row[5] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
